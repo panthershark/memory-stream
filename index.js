@@ -27,8 +27,9 @@ util.inherits(MemoryStream, Stream.Writable);
 MemoryStream.prototype._write = function(chunk, encoding, cb) {
   if (!this._writableState.objectMode && this.options.encoding === 'Buffer' && encoding === 'utf8') {
     this.buffer.push(new Buffer(chunk));
-  }
-  else {
+  } else if (this._writableState.objectMode) {
+    this.buffer.push(Buffer.isBuffer(chunk) ? JSON.parse(chunk) : chunk);
+  } else {
     this.buffer.push(chunk);
   }
   cb();
@@ -37,8 +38,7 @@ MemoryStream.prototype._write = function(chunk, encoding, cb) {
 MemoryStream.prototype.get = function() {
   if (this._writableState.objectMode) {
     return this.buffer;
-  }
-  else {
+  } else {
     return this.toBuffer();
   }
 };
@@ -46,8 +46,7 @@ MemoryStream.prototype.get = function() {
 MemoryStream.prototype.toString = function() {
   if (this._writableState.objectMode) {
     JSON.stringify(this.buffer);
-  }
-  else {
+  } else {
     return this.buffer.join('');
   }
 };
@@ -55,8 +54,7 @@ MemoryStream.prototype.toString = function() {
 MemoryStream.prototype.toBuffer = function() {
   if (this._writableState.objectMode) {
     return new Buffer(this.toString());
-  }
-  else {
+  } else {
     return Buffer.concat(this.buffer);
   }
 };
