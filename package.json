@@ -1,6 +1,6 @@
 {
   "name": "memory-stream",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node.js streams implementation for buffered memory writes",
   "main": "index.js",
   "scripts": {
