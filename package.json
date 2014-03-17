@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tommydudebreaux/memory-stream.git"
+    "url": "git://github.com/tommymessbauer/memory-stream.git"
   },
   "keywords": [
     "streams",
@@ -18,9 +18,9 @@
   "author": "Tommy Messbauer",
   "license": "MMIT",
   "bugs": {
-    "url": "https://github.com/tommydudebreaux/memory-stream/issues"
+    "url": "https://github.com/tommymessbauer/memory-stream/issues"
   },
-  "homepage": "https://github.com/tommydudebreaux/memory-stream",
+  "homepage": "https://github.com/tommymessbauer/memory-stream",
   "dependencies": {
     "readable-stream": "~1.0.26-2"
   }
