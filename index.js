@@ -1,15 +1,17 @@
+'use strict';
+
 var Stream = require("stream").Stream;
 var util = require('util');
 
 // For Node 0.8 users
 if (!Stream.Writable) {
-  Stream = require('readable-stream')
+  Stream = require('readable-stream');
 }
 
 // Internal proto for buffering memory stream
 var MemoryStream = function(options) {
   if (!(this instanceof MemoryStream)) {
-    return new MemoryStream();
+    return new MemoryStream(options);
   }
 
   this.options = options = options || {};
