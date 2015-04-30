@@ -16,7 +16,7 @@
     "buffer"
   ],
   "author": "Tommy Messbauer",
-  "license": "MMIT",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/tommymessbauer/memory-stream/issues"
   },
