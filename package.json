@@ -4,11 +4,11 @@
   "description": "Node.js streams implementation for buffered memory writes",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec -u tdd test/tests/*.js"
+    "test": "./node_modules/tape/bin/tape test/tests/*.js | tap-spec"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tommymessbauer/memory-stream.git"
+    "url": "git://github.com/doanythingfordethklok/memory-stream.git"
   },
   "keywords": [
     "streams",
@@ -16,12 +16,16 @@
     "buffer"
   ],
   "author": "Tommy Messbauer",
-  "license": "MMIT",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tommymessbauer/memory-stream/issues"
+    "url": "https://github.com/doanythingfordethklok/memory-stream/issues"
   },
-  "homepage": "https://github.com/tommymessbauer/memory-stream",
+  "homepage": "https://github.com/doanythingfordethklok/memory-stream",
   "dependencies": {
-    "readable-stream": "~1.0.26-2"
+    "readable-stream": "^3.4.0"
+  },
+  "devDependencies": {
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
   }
 }
