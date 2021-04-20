@@ -23,9 +23,6 @@
     "url": "https://github.com/doanythingfordethklok/memory-stream/issues"
   },
   "homepage": "https://github.com/doanythingfordethklok/memory-stream",
-  "dependencies": {
-    "readable-stream": "^3.4.0"
-  },
   "devDependencies": {
     "tap-spec": "^5.0.0",
     "tape": "^4.11.0",
