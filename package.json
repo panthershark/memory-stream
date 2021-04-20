@@ -2,9 +2,11 @@
   "name": "memory-stream",
   "version": "1.0.0",
   "description": "Node.js streams implementation for buffered memory writes",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "test": "./node_modules/tape/bin/tape test/tests/*.js | tap-spec"
+    "build": "tsc -p ./src/tsconfig.json",
+    "test": "tape test/tests/*.js | tap-spec",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -21,11 +23,9 @@
     "url": "https://github.com/doanythingfordethklok/memory-stream/issues"
   },
   "homepage": "https://github.com/doanythingfordethklok/memory-stream",
-  "dependencies": {
-    "readable-stream": "^3.4.0"
-  },
   "devDependencies": {
     "tap-spec": "^5.0.0",
-    "tape": "^4.11.0"
+    "tape": "^4.11.0",
+    "typescript": "^4.2.4"
   }
 }
