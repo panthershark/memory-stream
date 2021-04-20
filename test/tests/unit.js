@@ -1,7 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var test = require('tape');
-var MemoryStream = require('../../index.js');
+var MemoryStream = require('../../dist/index.js').default;
 
 test('Stream file', function (t) {
   t.plan(1);

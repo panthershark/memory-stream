@@ -6,11 +6,11 @@ Node.js streams implementation for buffered memory writes.
 # Usage
 
 ```javascript
-var fs = require('fs');
-var MemoryStream = require('memory-stream');
+const fs = require('fs');
+const MemoryStream = require('memory-stream').default;
 
-var rs = fs.createReadStream('source.txt');
-var ws = new MemoryStream();
+const rs = fs.createReadStream('source.txt');
+const ws = new MemoryStream();
 
 ws.on('finish', function() {
   console.log(ws.toString());
